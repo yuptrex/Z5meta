@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Z5meta — Zem, Software &amp; Embedded Developer</title>
+<meta name="description" content="Z5meta is Zem's dev studio — full-stack web and Android apps, plus ESP32/Arduino embedded systems, built and shipped solo.">
+<script>
+  (function(){
+    var s = localStorage.getItem('z5meta-theme');
+    var t = s === 'light' || s === 'dark' ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.classList.replace('no-js','js');
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css-tokens.css">
+<link rel="stylesheet" href="css-base.css">
+<link rel="stylesheet" href="css-nav.css">
+<link rel="stylesheet" href="css-components.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B5FEF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+</head>
+<body class="has-tabbar">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-mark">Z5</span>Z5<span class="brand-sub">meta</span></a>
+  <nav class="topbar-links" aria-label="Primary">
+    <a class="topbar-link is-active" data-nav-link="index.html" href="index.html">
+      <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home
+    </a>
+    <a class="topbar-link" data-nav-link="about.html" href="about.html">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About
+    </a>
+    <a class="topbar-link" data-nav-link="projects.html" href="projects.html">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects
+    </a>
+    <a class="topbar-link" data-nav-link="skills.html" href="skills.html">
+      <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V10M12 20V4M18 20v-7"/></svg>Skills
+    </a>
+    <a class="topbar-link" data-nav-link="contact.html" href="contact.html">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>Contact
+    </a>
+  </nav>
+  <div class="topbar-actions">
+    <a href="contact.html" class="btn btn-primary cta-mini">Let's talk</a>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="page-main">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Zem · Software &amp; Embedded Developer</p>
+          <h1 class="hero-title">I build <span class="gradient-text">software that ships</span><br>and firmware that runs.</h1>
+          <p class="hero-lede">
+            Indie developer working across web, Android, and embedded systems —
+            from Firebase-backed apps to ESP32 firmware. Everything here is built
+            solo, end to end: design, code, deploy.
+          </p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">View projects</a>
+            <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+          </div>
+
+          <div class="pipeline reveal" aria-hidden="true" style="margin-top: 40px;">
+            <div class="pipeline-step"><span class="pipeline-dot"></span>write</div>
+            <span class="pipeline-sep">→</span>
+            <div class="pipeline-step"><span class="pipeline-dot"></span>build</div>
+            <span class="pipeline-sep">→</span>
+            <div class="pipeline-step"><span class="pipeline-dot"></span>test</div>
+            <span class="pipeline-sep">→</span>
+            <div class="pipeline-step"><span class="pipeline-dot"></span>ship</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="reveal">
+              <p class="stat-value">10+</p>
+              <p class="stat-label">Shipped projects</p>
+            </div>
+            <div class="reveal">
+              <p class="stat-value">3</p>
+              <p class="stat-label">Platforms</p>
+            </div>
+            <div class="reveal">
+              <p class="stat-value">Solo</p>
+              <p class="stat-label">Full pipeline</p>
+            </div>
+            <div class="reveal">
+              <p class="stat-value">Render</p>
+              <p class="stat-label">+ Firebase infra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What I work in</p>
+        <h2 class="section-title">Three platforms, one builder</h2>
+        <p class="section-sub">Each project below picks whichever stack fits the problem — no single favorite tool.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 20h8"/></svg></div>
+          <h3 class="card-title">Web</h3>
+          <p class="card-desc">Single-file and full-stack web apps — Firebase realtime backends, no-build vanilla JS when it fits.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></div>
+          <h3 class="card-title">Android</h3>
+          <p class="card-desc">Native Kotlin apps built in phased pipelines, with AI agent tooling wired into production builds.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg></div>
+          <h3 class="card-title">Embedded</h3>
+          <p class="card-desc">ESP32 and Arduino firmware — sensors, actuators, wireless comms, bench-tested and debugged.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="text-align:center; padding: var(--sp-8) var(--sp-5);">
+        <h2 class="section-title" style="margin-bottom: var(--sp-3);">Have something to build?</h2>
+        <p class="section-sub" style="margin: 0 auto var(--sp-5); max-width: 50ch;">Reach out about a project, a collab, or just to talk shop on firmware and full-stack builds.</p>
+        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p class="footer-note">© 2026 Z5meta — built by Zem.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Primary mobile navigation">
+  <a class="tabbar-item is-active" data-nav-link="index.html" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home
+  </a>
+  <a class="tabbar-item" data-nav-link="about.html" href="about.html">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About
+  </a>
+  <a class="tabbar-item" data-nav-link="projects.html" href="projects.html">
+    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects
+  </a>
+  <a class="tabbar-item" data-nav-link="skills.html" href="skills.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16M6 20V10M12 20V4M18 20v-7"/></svg>Skills
+  </a>
+  <a class="tabbar-item" data-nav-link="contact.html" href="contact.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>Contact
+  </a>
+</nav>
+
+<script src="js-theme.js"></script>
+<script src="js-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Projects — Z5meta</title>
+<meta name="description" content="Web, Android, and embedded projects built and shipped by Zem — Mpro, TextPro, TicTacITZ, Three.js experiments, and more.">
+<script>
+  (function(){
+    var s = localStorage.getItem('z5meta-theme');
+    var t = s === 'light' || s === 'dark' ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.classList.replace('no-js','js');
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css-tokens.css">
+<link rel="stylesheet" href="css-base.css">
+<link rel="stylesheet" href="css-nav.css">
+<link rel="stylesheet" href="css-components.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B5FEF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+</head>
+<body class="has-tabbar">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-mark">Z5</span>Z5<span class="brand-sub">meta</span></a>
+  <nav class="topbar-links" aria-label="Primary">
+    <a class="topbar-link" data-nav-link="index.html" href="index.html">
+      <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home
+    </a>
+    <a class="topbar-link" data-nav-link="about.html" href="about.html">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About
+    </a>
+    <a class="topbar-link is-active" data-nav-link="projects.html" href="projects.html">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects
+    </a>
+    <a class="topbar-link" data-nav-link="skills.html" href="skills.html">
+      <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V10M12 20V4M18 20v-7"/></svg>Skills
+    </a>
+    <a class="topbar-link" data-nav-link="contact.html" href="contact.html">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>Contact
+    </a>
+  </nav>
+  <div class="topbar-actions">
+    <a href="contact.html" class="btn btn-primary cta-mini">Let's talk</a>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="page-main">
+
+  <div class="page-header container">
+    <p class="eyebrow page-eyebrow">Projects</p>
+    <h1 class="page-title">Things I've shipped.</h1>
+    <p class="page-lede">A running lineup across web, Android, and embedded — filter by platform or browse the full list.</p>
+  </div>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <div class="filter-row" role="group" aria-label="Filter projects by platform">
+        <button class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-pill" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-pill" data-filter="android" aria-pressed="false">Android</button>
+        <button class="filter-pill" data-filter="embedded" aria-pressed="false">Embedded</button>
+      </div>
+
+      <div class="grid grid-2">
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">TextPro <span style="color:var(--text-muted); font-weight:400;">(Mpro)</span></h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">Firebase-backed web chat app — per-user emoji reactions, long-press context menu, custom notification sounds, and a live AI bot participant. Single-file build.</p>
+          <div class="tag-row">
+            <span class="tag">HTML/JS</span><span class="tag">Firebase</span><span class="tag">AI Bot</span>
+          </div>
+          <a class="card-live-link" href="https://text5pro.vercel.app" target="_blank" rel="noopener noreferrer">
+            View live <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="card reveal" data-category="android">
+          <div class="project-card-head">
+            <h3 class="card-title">TextPro <span style="color:var(--text-muted); font-weight:400;">(Android)</span></h3>
+            <span class="project-status status-active">In progress</span>
+          </div>
+          <p class="card-desc">Native Kotlin rewrite of TextPro — chat, feeds, and social graph, with Gemini-powered AI assistant tooling and Firebase RTDB listeners wired through Jetpack Compose.</p>
+          <div class="tag-row">
+            <span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Firebase</span><span class="tag">Gemini</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">TicTacITZ</h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">Real-time multiplayer tic-tac-toe. Single HTML file, Firebase-backed move sync, zero build step, instant matches.</p>
+          <div class="tag-row">
+            <span class="tag">HTML/JS</span><span class="tag">Firebase</span><span class="tag">Realtime</span>
+          </div>
+          <a class="card-live-link" href="https://1tic.vercel.app" target="_blank" rel="noopener noreferrer">
+            View live <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">Camuz</h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">Quick-snap camera web app — fast in-browser capture and preview, built for speed over features.</p>
+          <div class="tag-row">
+            <span class="tag">HTML/JS</span><span class="tag">Camera API</span>
+          </div>
+          <a class="card-live-link" href="https://camuz.vercel.app" target="_blank" rel="noopener noreferrer">
+            View live <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">Three.js Experiments</h3>
+            <span class="project-status status-active">Ongoing</span>
+          </div>
+          <p class="card-desc">Browser-based 3D multiplayer games using KayKit assets — a hexagonal village warzone with weapon-attached character classes, and an infinite procedurally generated melee-combat world.</p>
+          <div class="tag-row">
+            <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">Firebase</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="android">
+          <div class="project-card-head">
+            <h3 class="card-title">HtmlSimulator</h3>
+            <span class="project-status status-active">In progress</span>
+          </div>
+          <p class="card-desc">Android app (Kotlin) that converts HTML files into installable APKs, using Termux as an on-device ARM build engine.</p>
+          <div class="tag-row">
+            <span class="tag">Kotlin</span><span class="tag">Termux</span><span class="tag">Gradle</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">Telegram RPG Battle Arena</h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">Turn-based Telegram RPG bot — ELO matchmaking, guilds, tournaments, hero progression, and a full in-game economy across 45 source files.</p>
+          <div class="tag-row">
+            <span class="tag">Node.js</span><span class="tag">Telegraf</span><span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <div class="project-card-head">
+            <h3 class="card-title">Photo-Styling Bot</h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">Telegram bot with 30+ OpenCV-based visual filters across two pages, deployed on Render with automated webhook handling.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Render</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="embedded">
+          <div class="project-card-head">
+            <h3 class="card-title">Dual-ESP32 IoT</h3>
+            <span class="project-status status-active">Exploring</span>
+          </div>
+          <p class="card-desc">A full-stack IoT concept spanning two ESP32 nodes with Telegram, MongoDB, Firebase, and Render — architecture in progress, concept still being scoped.</p>
+          <div class="tag-row">
+            <span class="tag">ESP32</span><span class="tag">C/C++</span><span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-state" hidden>No projects match that filter yet.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p class="footer-note">© 2026 Z5meta — built by Zem.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Primary mobile navigation">
+  <a class="tabbar-item" data-nav-link="index.html" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home
+  </a>
+  <a class="tabbar-item" data-nav-link="about.html" href="about.html">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About
+  </a>
+  <a class="tabbar-item is-active" data-nav-link="projects.html" href="projects.html">
+    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects
+  </a>
+  <a class="tabbar-item" data-nav-link="skills.html" href="skills.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16M6 20V10M12 20V4M18 20v-7"/></svg>Skills
+  </a>
+  <a class="tabbar-item" data-nav-link="contact.html" href="contact.html">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>Contact
+  </a>
+</nav>
+
+<script src="js-theme.js"></script>
+<script src="js-main.js"></script>
+<script src="js-project-filter.js"></script>
+</body>
+</html>

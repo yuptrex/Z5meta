@@ -1,0 +1,194 @@
+/* ==========================================================================
+   NAVIGATION — genuinely different structure per device tier, not just
+   fluid resize. Desktop: full top nav. Tablet: condensed top nav with
+   icon+label. Mobile: bottom tab bar (native-app pattern) + slim top bar
+   for logo/theme toggle.
+   ========================================================================== */
+
+/* ---------- Shared top bar (logo + theme toggle), all tiers ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 var(--sp-5);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  letter-spacing: -0.02em;
+}
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--r-sm);
+  background: var(--brand-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.brand-sub { color: var(--text-muted); font-weight: 500; }
+
+/* Desktop inline links (hidden on mobile/tablet, shown via media query) */
+.topbar-links {
+  display: none;
+  gap: var(--sp-6);
+  align-items: center;
+}
+.topbar-link {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: var(--sp-2) 0;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.topbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  background: var(--brand-gradient);
+  border-radius: var(--r-pill);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.topbar-link:hover,
+.topbar-link:focus-visible {
+  color: var(--text-primary);
+}
+.topbar-link:hover::after,
+.topbar-link:focus-visible::after,
+.topbar-link.is-active::after {
+  transform: scaleX(1);
+}
+.topbar-link.is-active {
+  color: var(--text-primary);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--border-strong); }
+.theme-toggle:active { transform: scale(0.94); }
+.theme-toggle svg { width: 18px; height: 18px; stroke: var(--text-primary); }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+.cta-mini {
+  display: none;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-pill);
+  background: var(--brand-gradient);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ---------- Mobile bottom tab bar ---------- */
+.tabbar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 100;
+  height: var(--tabbar-h);
+  display: flex;
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.tabbar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.tabbar-item svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+}
+.tabbar-item.is-active {
+  color: var(--accent);
+}
+.tabbar-item.is-active svg {
+  stroke: var(--accent);
+}
+
+/* content needs bottom padding so tabbar doesn't cover it, mobile only */
+.has-tabbar {
+  padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + var(--sp-5));
+}
+
+/* ---------- Tablet tier: condensed top nav, icon+label inline ---------- */
+@media (min-width: 700px) {
+  .tabbar { display: none; }
+  .has-tabbar { padding-bottom: 0; }
+
+  .topbar-links {
+    display: flex;
+    gap: var(--sp-5);
+  }
+  .topbar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-size: 0.85rem;
+  }
+  .topbar-link svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+  }
+}
+
+/* ---------- Desktop tier: full nav, labels only (no icons), CTA visible ---------- */
+@media (min-width: 1024px) {
+  .topbar { padding: 0 var(--sp-7); }
+  .topbar-link svg { display: none; }
+  .topbar-links { gap: var(--sp-7); }
+  .topbar-link { font-size: 0.95rem; }
+  .cta-mini { display: inline-flex; align-items: center; }
+}

@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Z5META — DESIGN TOKENS
+   Theme: modern software/product studio (not PCB/chip)
+   Light + dark via [data-theme]; system preference is the default.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand ---- */
+  --brand-indigo: #5B5FEF;
+  --brand-indigo-strong: #4347D9;
+  --brand-teal: #22D3B8;
+  --brand-gradient: linear-gradient(135deg, var(--brand-indigo) 0%, var(--brand-teal) 100%);
+
+  /* ---- Semantic (dark default) ---- */
+  --bg: #0B0D12;
+  --bg-raised: #12151D;
+  --bg-card: #161A24;
+  --bg-card-hover: #1B2030;
+  --border: #262B3A;
+  --border-strong: #363D52;
+
+  --text-primary: #F1F2F6;
+  --text-secondary: #ABB0C0;
+  --text-muted: #6E7386;
+
+  --accent: var(--brand-indigo);
+  --accent-2: var(--brand-teal);
+  --accent-contrast: #FFFFFF;
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #FB7185;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.32);
+  --shadow-lg: 0 20px 48px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 0 1px rgba(91,95,239,0.4), 0 8px 32px rgba(91,95,239,0.24);
+
+  /* ---- Type ---- */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* ---- Radius ---- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* ---- Spacing scale ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-mid: 280ms;
+  --dur-slow: 480ms;
+
+  /* ---- Layout ---- */
+  --nav-h-mobile: 64px;
+  --tabbar-h: 64px;
+  --content-max: 1180px;
+}
+
+/* ---- Light theme override ---- */
+[data-theme="light"] {
+  --bg: #F7F8FA;
+  --bg-raised: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F2F8;
+  --border: #E4E6EE;
+  --border-strong: #D2D5E1;
+
+  --text-primary: #14161F;
+  --text-secondary: #52586B;
+  --text-muted: #8B90A3;
+
+  --accent-contrast: #FFFFFF;
+
+  --shadow-sm: 0 1px 2px rgba(20,22,31,0.06);
+  --shadow-md: 0 8px 24px rgba(20,22,31,0.08);
+  --shadow-lg: 0 20px 48px rgba(20,22,31,0.12);
+  --shadow-glow: 0 0 0 1px rgba(91,95,239,0.24), 0 8px 32px rgba(91,95,239,0.16);
+}

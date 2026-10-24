@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Z5meta — Zem, Software &amp; Embedded Developer</title>
+<meta property="og:title" content="Z5meta — Zem, Software &amp; Embedded Developer">
+<meta property="og:description" content="Web, Android and embedded projects built solo — Cuga Simulator, callU, Clash of Super Knights and more.">
+<meta name="theme-color" content="#3D3BFF">
 <meta name="description" content="Z5meta is Zem's dev studio — full-stack web and Android apps, plus ESP32/Arduino embedded systems, built and shipped solo.">
 <script>
   (function(){
@@ -13,14 +16,18 @@
     document.documentElement.classList.replace('no-js','js');
   })();
 </script>
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css-tokens.css">
 <link rel="stylesheet" href="css-base.css">
 <link rel="stylesheet" href="css-nav.css">
 <link rel="stylesheet" href="css-components.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B5FEF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233D3BFF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
 </head>
 <body class="has-tabbar">
 
@@ -61,7 +68,7 @@
       <div class="hero-grid">
         <div>
           <p class="eyebrow">Zem · Software &amp; Embedded Developer</p>
-          <h1 class="hero-title">I build <span class="gradient-text">software that ships</span><br>and firmware that runs.</h1>
+          <h1 class="hero-title">I build software that ships and firmware that runs.</h1>
           <p class="hero-lede">
             Indie developer working across web, Android, and embedded systems —
             from Firebase-backed apps to ESP32 firmware. Everything here is built
@@ -101,9 +108,22 @@
             </div>
           </div>
         </div>
+        <aside class="hero-visual" aria-label="What I'm building right now">
+          <div class="now-card">
+            <p class="now-title">On the bench right now</p>
+            <a class="now-row" href="projects.html"><div><strong>Cuga Simulator</strong><span>Android · game store for HTML5 games</span></div><b>90%</b><i style="--p:90%"></i></a>
+            <a class="now-row" href="projects.html"><div><strong>callU</strong><span>Calling app · web version soon</span></div><b>Building</b><i style="--p:45%"></i></a>
+            <a class="now-row" href="https://csknights.vercel.app" target="_blank" rel="noopener noreferrer"><div><strong>Clash of Super Knights</strong><span>2D battle royale · play it now</span></div><b>Live</b><i style="--p:100%"></i></a>
+          </div>
+          <img class="hero-art" src="img-hero.png" alt="" onerror="this.remove()">
+          <span class="sticker sticker-a">solo dev</span>
+          <span class="sticker sticker-b">ships weekly</span>
+        </aside>
       </div>
     </div>
   </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Firebase</span><span>ESP32</span><span>Kotlin</span><span>Arduino</span><span>Three.js</span><span>Vanilla JS</span><span>Render</span><span>Android</span><span>Firmware</span><span>Vercel</span><span>Firebase</span><span>ESP32</span><span>Kotlin</span><span>Arduino</span><span>Three.js</span><span>Vanilla JS</span><span>Render</span><span>Android</span><span>Firmware</span><span>Vercel</span></div></div>
 
   <section class="section">
     <div class="container">
@@ -135,6 +155,20 @@
 
   <section class="section">
     <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Latest work</p>
+        <h2 class="section-title">Fresh off the keyboard</h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="card reveal feat" href="https://csknights.vercel.app" target="_blank" rel="noopener noreferrer"><span class="project-status status-shipped">Live</span><img class="card-art" src="img-csknights.png" alt="" loading="lazy" onerror="this.remove()"><h3 class="card-title">Clash of Super Knights</h3><p class="card-desc">2D battle royale with online multiplayer, an offline mode and Google sign-in.</p></a>
+        <a class="card reveal feat" href="projects.html"><span class="project-status status-active">90% done</span><img class="card-art" src="img-cuga.png" alt="" loading="lazy" onerror="this.remove()"><h3 class="card-title">Cuga Simulator</h3><p class="card-desc">Android app that installs and plays HTML5 games full-screen, with one login for every game.</p></a>
+        <a class="card reveal feat" href="projects.html"><span class="project-status status-active">In progress</span><img class="card-art" src="img-callu.png" alt="" loading="lazy" onerror="this.remove()"><h3 class="card-title">callU</h3><p class="card-desc">A calling app for Android, with a web version on the way.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <div class="card reveal" style="text-align:center; padding: var(--sp-8) var(--sp-5);">
         <h2 class="section-title" style="margin-bottom: var(--sp-3);">Have something to build?</h2>
         <p class="section-sub" style="margin: 0 auto var(--sp-5); max-width: 50ch;">Reach out about a project, a collab, or just to talk shop on firmware and full-stack builds.</p>
@@ -153,6 +187,8 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="contact.html">Contact</a>
+      <a href="https://instagram.com/z5meta" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me/z5met" target="_blank" rel="noopener noreferrer">Telegram</a>
     </nav>
   </div>
 </footer>

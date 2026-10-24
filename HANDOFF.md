@@ -142,9 +142,9 @@ class + `data-nav-link` targets in both the topbar and tabbar nav.
   `contact.html`, not wired into the form. Same open question as v1: confirm
   with Zem if the brand address should be the form target instead.
 - Project content (Mpro/TextPro, TextPro Android, TicTacITZ, Camuz, Three.js
-  experiments, HtmlSimulator, RPG bot, photo-styling bot, dual-ESP32 concept)
+  experiments, Cuga Simulator, RPG bot, photo-styling bot, dual-ESP32 concept)
   was pulled from known project history — real project names/descriptions,
-  not placeholders. If Zem has more recent status changes (e.g. HtmlSimulator
+  not placeholders. If Zem has more recent status changes (e.g. Cuga Simulator
   ships), update the `.project-status` badge class
   (`status-shipped`/`status-active`) and copy in `projects.html`.
 - **Live deploy links (added, confirmed by Zem):**
@@ -155,7 +155,7 @@ class + `data-nav-link` targets in both the topbar and tabbar nav.
   - These render as a "View live ↗" link (`.card-live-link` in
     `components.css`) inside the project card, opens in a new tab
     (`target="_blank" rel="noopener noreferrer"`). Other cards (TextPro
-    Android, Three.js experiments, HtmlSimulator, RPG bot, photo-styling
+    Android, Three.js experiments, Cuga Simulator, RPG bot, photo-styling
     bot, dual-ESP32) have no live link yet since they're not deployed
     standalone — add the same `.card-live-link` markup if/when Zem shares
     URLs for those too.
@@ -190,3 +190,18 @@ class + `data-nav-link` targets in both the topbar and tabbar nav.
 - Consider adding real screenshots/preview images to project cards once
   Zem has some to share — currently text/icon only, no visual project
   previews.
+
+---
+## v3 RESTYLE (Zem asked for a less generic, more "human" look)
+- Fonts now Bricolage Grotesque (display) + DM Sans (body). Mono/uppercase labels removed.
+- Palette: violet-black / lilac, accents ultramarine #3D3BFF, pink #FF6FB5, highlighter yellow #FFE066.
+- Sticker style: 2px borders, hard offset shadows, slight rotations, staggered home cards, yellow marquee strip on home.
+- All v3 overrides are at the END of css-components.css and css-nav.css; tokens updated in css-tokens.css. Class names unchanged.
+
+### v3.1
+- Home hero now has an "On the bench right now" card (Cuga Simulator 90%, callU building, Clash of Super Knights live) + "Latest work" section. Update these when project status changes.
+- Projects page leads with Cuga Simulator, Clash of Super Knights, callU. HtmlSimulator was renamed Cuga Simulator everywhere.
+- Still open: OG image (PNG), real project screenshots, canonical URL.
+
+### v3.2 image slots (optional, transparent PNGs at repo root)
+img-hero.png (home hero), og-image.jpg (link preview, wired on all pages), img-about.png (about page), img-cuga.png, img-csknights.png, img-callu.png (project cards). If a file is missing the image removes itself — nothing breaks. Facts strip added on About.

@@ -192,3 +192,13 @@
   .topbar-link { font-size: 0.95rem; }
   .cta-mini { display: inline-flex; align-items: center; }
 }
+
+/* V3 nav */
+.topbar{border-bottom:2px solid var(--border);background:color-mix(in srgb,var(--bg) 88%,transparent)}
+.brand-mark{background:#FFE066;color:#15102B;border:2px solid #15102B;border-radius:12px;transform:rotate(-6deg);font-weight:800}
+.tabbar{border-top:2px solid var(--border);background:var(--bg-raised)}
+.tabbar-item.is-active{color:#FFE066}
+.topbar-link.is-active{background:#FFE066;color:#15102B;border-radius:999px}
+.theme-toggle{border:2px solid var(--border);border-radius:50%}
+.topbar .cta-mini{display:none}
+@media(min-width:1024px){.topbar .cta-mini{display:inline-flex;padding:10px 22px}}

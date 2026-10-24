@@ -13,14 +13,18 @@
     document.documentElement.classList.replace('no-js','js');
   })();
 </script>
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css-tokens.css">
 <link rel="stylesheet" href="css-base.css">
 <link rel="stylesheet" href="css-nav.css">
 <link rel="stylesheet" href="css-components.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B5FEF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233D3BFF'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
 </head>
 <body class="has-tabbar">
 
@@ -58,7 +62,7 @@
 
   <div class="page-header container">
     <p class="eyebrow page-eyebrow">Projects</p>
-    <h1 class="page-title">Things I've shipped.</h1>
+    <h1 class="page-title">Things I've shipped, and what's next.</h1>
     <p class="page-lede">A running lineup across web, Android, and embedded — filter by platform or browse the full list.</p>
   </div>
 
@@ -73,6 +77,45 @@
       </div>
 
       <div class="grid grid-2">
+
+        <article class="card reveal" data-category="android">
+          <img class="card-art" src="img-cuga.png" alt="" loading="lazy" onerror="this.remove()">
+          <div class="project-card-head">
+            <h3 class="card-title">Cuga Simulator</h3>
+            <span class="project-status status-active">90% done</span>
+          </div>
+          <p class="card-desc">A mini game store for HTML5 games. Players tap Install, the game zip downloads from GitHub, unzips on the phone, and opens full-screen with the player's own login and nickname — no sign-up screen inside any game. Games can be added or updated just by dropping a zip in the repo.</p>
+          <div class="tag-row">
+            <span class="tag">Android</span><span class="tag">WebView</span><span class="tag">HTML5 games</span><span class="tag">Firebase</span><span class="tag">GitHub</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="web">
+          <img class="card-art" src="img-csknights.png" alt="" loading="lazy" onerror="this.remove()">
+          <div class="project-card-head">
+            <h3 class="card-title">Clash of Super Knights</h3>
+            <span class="project-status status-shipped">Shipped</span>
+          </div>
+          <p class="card-desc">A 2D battle royale game you play right in the browser. Fight online against other players in multiplayer, or play offline on your own. Sign in with Google to join.</p>
+          <div class="tag-row">
+            <span class="tag">2D Game</span><span class="tag">Battle Royale</span><span class="tag">Multiplayer</span><span class="tag">Offline</span><span class="tag">Google Sign-In</span>
+          </div>
+          <a class="card-live-link" href="https://csknights.vercel.app" target="_blank" rel="noopener noreferrer">
+            View live <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="card reveal" data-category="android">
+          <img class="card-art" src="img-callu.png" alt="" loading="lazy" onerror="this.remove()">
+          <div class="project-card-head">
+            <h3 class="card-title">callU</h3>
+            <span class="project-status status-active">In progress</span>
+          </div>
+          <p class="card-desc">A calling app for Android, still in progress. A web version is coming soon.</p>
+          <div class="tag-row">
+            <span class="tag">Android</span><span class="tag">Calling</span><span class="tag">Web soon</span>
+          </div>
+        </article>
 
         <article class="card reveal" data-category="web">
           <div class="project-card-head">
@@ -138,17 +181,6 @@
           </div>
         </article>
 
-        <article class="card reveal" data-category="android">
-          <div class="project-card-head">
-            <h3 class="card-title">HtmlSimulator</h3>
-            <span class="project-status status-active">In progress</span>
-          </div>
-          <p class="card-desc">Android app (Kotlin) that converts HTML files into installable APKs, using Termux as an on-device ARM build engine.</p>
-          <div class="tag-row">
-            <span class="tag">Kotlin</span><span class="tag">Termux</span><span class="tag">Gradle</span>
-          </div>
-        </article>
-
         <article class="card reveal" data-category="web">
           <div class="project-card-head">
             <h3 class="card-title">Telegram RPG Battle Arena</h3>
@@ -199,6 +231,8 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="contact.html">Contact</a>
+      <a href="https://instagram.com/z5meta" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me/z5met" target="_blank" rel="noopener noreferrer">Telegram</a>
     </nav>
   </div>
 </footer>
